@@ -1,5 +1,7 @@
 # @chaojihao/openclaw-plugin-bocha
 
+[![CI](https://github.com/helloworldtang/openclaw-plugin-bocha/actions/workflows/ci.yml/badge.svg)](https://github.com/helloworldtang/openclaw-plugin-bocha/actions/workflows/ci.yml)
+
 [Bocha](https://open.bocha.cn) Web Search provider plugin for
 [OpenClaw](https://github.com/openclaw/openclaw). Adds `bocha` as a selectable
 provider for the built-in `web_search` tool.

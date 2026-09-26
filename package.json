@@ -1,6 +1,6 @@
 {
   "name": "@chaojihao/openclaw-plugin-bocha",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Bocha Web Search provider plugin for OpenClaw \u2014 Chinese-first web search with direct China mainland access.",
   "repository": {
     "type": "git",
