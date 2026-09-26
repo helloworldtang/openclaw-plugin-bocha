@@ -1,5 +1,7 @@
 # @chaojihao/openclaw-plugin-bocha
 
+English | [简体中文](./README.zh-CN.md)
+
 [![CI](https://github.com/helloworldtang/openclaw-plugin-bocha/actions/workflows/ci.yml/badge.svg)](https://github.com/helloworldtang/openclaw-plugin-bocha/actions/workflows/ci.yml)
 
 [Bocha](https://open.bocha.cn) Web Search provider plugin for
@@ -28,16 +30,26 @@ Then set your API key (get one at <https://open.bocha.cn>, free tier available):
 
 ```bash
 openclaw config set plugins.entries.bocha.enabled true
-# Option A: store the key in OpenClaw config
-openclaw configure --section web
-# Option B: environment variable in the Gateway environment
-export BOCHA_API_KEY=sk-...
+# Option A (recommended, persistent): store the key in OpenClaw config
+openclaw config set plugins.entries.bocha.config.webSearch.apiKey sk-...
+# or interactively: openclaw configure --section web
+# Option B: environment variable — must reach the Gateway process itself
+# (on macOS a shell export or `launchctl setenv` does not survive a reboot,
+#  hence Option A; the config entry also takes priority over the env var)
+BOCHA_API_KEY=sk-...
 ```
 
 Select the provider:
 
 ```bash
 openclaw config set tools.web.search.provider bocha
+```
+
+**Don't forget**: `tools.web.search.enabled` is off by default — without it the
+`web_search` tool never shows up:
+
+```bash
+openclaw config set tools.web.search.enabled true
 ```
 
 ## Tool parameters
