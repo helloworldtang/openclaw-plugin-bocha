@@ -1,4 +1,4 @@
-# openclaw-plugin-bocha
+# @chaojihao/openclaw-plugin-bocha
 
 [Bocha](https://open.bocha.cn) Web Search provider plugin for
 [OpenClaw](https://github.com/openclaw/openclaw). Adds `bocha` as a selectable
@@ -15,7 +15,7 @@ provider for the built-in `web_search` tool.
 ## Install
 
 ```bash
-openclaw plugins install openclaw-plugin-bocha
+openclaw plugins install @chaojihao/openclaw-plugin-bocha
 ```
 
 Then set your API key (get one at <https://open.bocha.cn>, free tier available):
