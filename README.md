@@ -6,6 +6,10 @@
 [OpenClaw](https://github.com/openclaw/openclaw). Adds `bocha` as a selectable
 provider for the built-in `web_search` tool.
 
+> Not using OpenClaw? A standalone [ClawHub skill](./skill/SKILL.md)
+> ([clawhub.ai/helloworldtang/skills/bocha](https://clawhub.ai/helloworldtang/skills/bocha))
+> teaches any agent to call the Bocha API directly with the same conventions.
+
 ## Why
 
 - **Chinese-first search quality** — Bocha's index is strong on Chinese-language
