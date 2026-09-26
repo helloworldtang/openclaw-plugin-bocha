@@ -1,0 +1,58 @@
+{
+  "id": "bocha",
+  "categories": ["web"],
+  "name": "Bocha",
+  "description": "Bocha Web Search provider plugin for OpenClaw.",
+  "activation": {
+    "onStartup": false
+  },
+  "setup": {
+    "providers": [
+      {
+        "id": "bocha",
+        "envVars": ["BOCHA_API_KEY"]
+      }
+    ]
+  },
+  "uiHints": {
+    "webSearch.apiKey": {
+      "label": "Bocha Search API Key",
+      "help": "Bocha AI API key (fallback: BOCHA_API_KEY env var).",
+      "sensitive": true,
+      "placeholder": "sk-..."
+    },
+    "webSearch.baseUrl": {
+      "label": "Bocha Search Base URL",
+      "help": "Optional API base URL override. Defaults to https://api.bocha.cn."
+    }
+  },
+  "contracts": {
+    "webSearchProviders": ["bocha"]
+  },
+  "configGroups": [
+    {
+      "id": "web-search",
+      "title": "Web search",
+      "order": 10,
+      "properties": ["webSearch"]
+    }
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "webSearch": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "apiKey": {
+            "type": ["string", "object"]
+          },
+          "baseUrl": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

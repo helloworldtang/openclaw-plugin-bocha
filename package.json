@@ -1,0 +1,61 @@
+{
+  "name": "openclaw-plugin-bocha",
+  "version": "0.1.0",
+  "description": "Bocha Web Search provider plugin for OpenClaw — Chinese-first web search with direct China mainland access.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helloworldtang/openclaw-plugin-bocha.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=24.16.0"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.9.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^26.0.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "openclaw": "2026.9.6",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.0",
+    "vitest": "^3.2.4"
+  },
+  "packageManager": "pnpm@10.18.3",
+  "openclaw": {
+    "extensions": [
+      "./src/index.ts"
+    ],
+    "runtimeExtensions": [
+      "./dist/index.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.9.6"
+    },
+    "build": {
+      "openclawVersion": "2026.9.6"
+    }
+  }
+}
