@@ -88,4 +88,4 @@ openclaw plugins install @chaojihao/openclaw-plugin-bocha
 openclaw config set tools.web.search.provider bocha
 ```
 
-插件页：<https://clawhub.ai/chaojihao/plugins/bocha> · 源码：<https://github.com/helloworldtang/openclaw-plugin-bocha>
+插件页：<https://clawhub.ai/chaojihao/plugins/openclaw-plugin-bocha> · 源码：<https://github.com/helloworldtang/openclaw-plugin-bocha>
